@@ -1,7 +1,5 @@
-from login import login
-from register import register
-from register import access
 from os.path import expanduser
+
 
 class BColors():
     HEADER = '\033[97m'
@@ -15,7 +13,7 @@ class BColors():
     DARK = '\033[90m'
     HIGHLIGHT = '\033[100m'
 
-API_DOMAIN_ROOT = 'http://192.168.1.154:8000/sprint-developer/v1/'
+API_DOMAIN_ROOT = 'http://0.0.0.0:8000/sprint-developer/v1/'
 
 CONFIG_DIR = '.config'
 
@@ -29,21 +27,16 @@ SPRINT_PATH = CONFIG_PATH + '/' + HESPRINT_DIR
 
 CRED_FILE_NAME = 'credentials.json'
 
-CRED_FILE_PATH = SPRINT_PATH +  '/' + CRED_FILE_NAME
+CRED_FILE_PATH = SPRINT_PATH + '/' + CRED_FILE_NAME
 
 SLUG_FILE_NAME = 'slug.json'
 
-SLUG_FILE_PATH = SPRINT_PATH + '/' +SLUG_FILE_NAME
+SLUG_FILE_PATH = SPRINT_PATH + '/' + SLUG_FILE_NAME
 
 TEAM_FILE_NAME = 'team.json'
 
-TEAM_FILE_PATH = SPRINT_PATH + '/' +TEAM_FILE_NAME
+TEAM_FILE_PATH = SPRINT_PATH + '/' + TEAM_FILE_NAME
 
-COMMAND_MAP = {
-        'login' : login,
-        'register': register,
-        'access': access,
-    }
 
 class VerbosityLevel:
     ERROR = 100
