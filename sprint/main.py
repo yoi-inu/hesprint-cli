@@ -33,6 +33,7 @@ from docopt import docopt
 from inspect import isclass, getmembers
 
 from sprint_commands import login, logout, access, register
+from sprint_commands import team
 import sprint_commands
 
 if __name__ == '__main__':

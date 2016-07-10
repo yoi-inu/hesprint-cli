@@ -11,13 +11,10 @@ from constants import VERBOSE_COLOR_MAP
 from constants import VerbosityLevel
 
 
-def send_request(url, sprint_slug=None, team_slug=None):
+def send_request(url, sprint_slug='', team_slug=''):
     url = API_DOMAIN_ROOT + url
 
-    if sprint_slug:
-        url = url.format(sprint_slug=sprint_slug)
-    if team_slug:
-        url = url.format(team_slug=team_slug)
+    url = url.format(sprint_slug=sprint_slug, team_slug=team_slug)
 
     data = {}
     data = apply_auth_creds(data)
