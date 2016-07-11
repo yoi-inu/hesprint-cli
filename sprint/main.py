@@ -13,9 +13,13 @@ Usage:
     sprint team <join>
     sprint team <join> <team_slug>
     sprint teams
-    sprint submission
-    sprint submission save
-    sprint submission <team_slug>
+    sprint submission show
+    sprint submission show <team_slug>
+    sprint submission add
+    sprint submission add theme
+    sprint submission add source <file_path>
+    sprint submission add presentation <file_path>
+    sprint submission push
     sprint submissions
 
 
@@ -33,7 +37,7 @@ from docopt import docopt
 from inspect import isclass, getmembers
 
 from sprint_commands import login, logout, access, register
-from sprint_commands import team
+from sprint_commands import team, submission
 import sprint_commands
 
 if __name__ == '__main__':

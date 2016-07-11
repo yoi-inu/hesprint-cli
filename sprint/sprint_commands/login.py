@@ -6,7 +6,7 @@ from utils import log, send_request
 
 from constants import API_DOMAIN_ROOT
 from constants import CONFIG_PATH
-from constants import SPRINT_PATH
+from constants import HESPRINT_PATH
 from constants import CRED_FILE_PATH
 from constants import BColors
 
@@ -39,8 +39,8 @@ class Login(BaseSprintCommand):
         if not os.path.exists(CONFIG_PATH):
             os.makedirs(CONFIG_PATH)
 
-        if not os.path.exists(SPRINT_PATH):
-            os.makedirs(SPRINT_PATH)
+        if not os.path.exists(HESPRINT_PATH):
+            os.makedirs(HESPRINT_PATH)
         with open(CRED_FILE_PATH, 'wb') as temp_file:
             json.dump(credentials, temp_file)
         msg = 'Successfully logged in to HackerEarth Sprint.'
